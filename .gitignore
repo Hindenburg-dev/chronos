@@ -1,0 +1,57 @@
+# === Go编译产物 核心必忽略 ===
+# 直接go build生成的可执行二进制文件
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.out
+
+# Go测试、覆盖率相关生成文件
+*.test
+*.prof
+coverage.txt
+coverage.html
+
+# Go工作区相关临时文件
+go.work.sum
+
+# === 项目构建/打包输出 ===
+# 自定义构建产物目录，很多Go项目会把编译后的文件输出到bin、dist文件夹
+bin/
+dist/
+build/
+release/
+
+# === 依赖和模块缓存 ===
+# GoVendor模式下的临时vendor缓存，大部分场景不需要上传
+vendor/
+
+# === IDE和编辑器缓存 ===
+# VSCode配置
+.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# GoLand/IDEA配置
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# 通用编辑器临时文件
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# === 敏感配置和临时文件 ===
+.env
+config.local.yaml
+config.toml.local
+*.log
+tmp/
+temp/
